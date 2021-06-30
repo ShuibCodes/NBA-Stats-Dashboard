@@ -1,0 +1,31 @@
+[
+  {
+      "id": 33921,
+      "date": "2016-06-19T00:00:00.000Z",
+      "home_team": {
+          "id": 10,
+          "abbreviation": "GSW",
+          "city": "Golden State",
+          "conference": "West",
+          "division": "Pacific",
+          "label": "Golden State Warriors",
+          "name": "Warriors"
+      },
+      "home_team_score": 89,
+      "period": 4,
+      "postseason": true,
+      "season": 2015,
+      "status": "Final",
+      "time": " ",
+      "visitor_team": {
+          "id": 6,
+          "abbreviation": "CLE",
+          "city": "Cleveland",
+          "conference": "East",
+          "division": "Central",
+          "label": "Cleveland Cavaliers",
+          "name": "Cavaliers"
+      },
+      "value": 93
+  }
+]

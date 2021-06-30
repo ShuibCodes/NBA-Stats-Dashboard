@@ -5,21 +5,23 @@ import OKC from './images/Oklahoma_City_Thunder.svg.png'
 import LAL from './images/1280px-Los_Angeles_Lakers_logo.svg.png'
 import PHX from './images/phoenix-suns-logo-black-and-white-transparent.png'
 import LAC from './images/1280px-The_official_logo_of_the_Los_Angeles_Clippers.svg.png'
+import FinalsGame from './Charts/FinalsGame';
 
 
 
 function App() {
   return (
     <div >
+    
  <body class="bg-white-400" >
     
     <div class="p-0  w-screen h-24 bg-red-600 flex py-4 justify-evenly   ">
    
-      <h3 class="bg-blue-400 w-32  h-10 rounded px-8 py-1 " >Players</h3>
-      <h3 class=" w-46 bg-blue-400   h-10 rounded px-6 py-1">Eastern Conference</h3>
-      <h3 class=" w-46 bg-blue-400   h-10 rounded px-6 py-1" >Western Conference</h3>
+      <button class="bg-blue-400 w-32  h-10 rounded px-8 py-1 cursor-pointer " >Players</button>
+      <button class=" w-46 bg-blue-400   h-10 rounded px-6 py-1 cursor-pointer ">Eastern Conference</button>
+      <button class=" w-46 bg-blue-400   h-10 rounded px-6 py-1 cursor-pointer  " >Western Conference</button>
 
-  
+       
   
     </div>
 
@@ -38,11 +40,11 @@ function App() {
 
 
   </div>
-   <div class="w-48 mx-20 py-24 ">
-     <div>
-     
+   <div class="  mx-20 w-screen ">
+     <div class="w-100 h-96" >
+     <FinalsGame/>
      </div>
-    
+
  
    </div>
 </div>
