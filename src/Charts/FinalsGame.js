@@ -1,13 +1,47 @@
 import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
-import data from './data.json'
+
 
 export default function FinalsGame() {
 
-    const nbaObj = data[0].home_team
+   // home team 
+   const nba =  [
+    {
+        "id": 33921,
+        "date": "2016-06-19T00:00:00.000Z",
+        "home_team": {
+            "id": 10,
+            "abbreviation": "GSW",
+            "city": "Golden State",
+            "conference": "West",
+            "division": "Pacific",
+            "full_name": "Golden State Warriors",
+            "name": "Warriors"
+        },
+        "home_team_score": 89,
+        "period": 4,
+        "postseason": true,
+        "season": 2015,
+        "status": "Final",
+        "time": " ",
+        "visitor_team": {
+            "id": 6,
+            "abbreviation": "CLE",
+            "city": "Cleveland",
+            "conference": "East",
+            "division": "Central",
+            "full_name": "Cleveland Cavaliers",
+            "name": "Cavaliers"
+        },
+        "visitor_team_score": 93
+    }
+]
 
+const nbaObj = nba[0].home_team
 
-let homeScore = data[0].value
+console.log(nba)
+let homeScore = nba[0].home_team_score
+
 
  homeScore = {
    ...nbaObj,
@@ -17,27 +51,32 @@ let homeScore = data[0].value
  console.log(homeScore)
 
  // Visitor team 
- const nbaObjVisitor = data[0].visitor_team
+ const nbaObjVisitor = nba[0].visitor_team
 
 
-let visitorScore = data[0].value
+let visitorScore = nba[0].visitor_team_score
 
 
  visitorScore = {
    ...nbaObjVisitor,
-  value :  visitorScore
+   value :  visitorScore
  }
 
  console.log(visitorScore)
 
 
+ const newData = [
+    {...homeScore},
+    {...visitorScore}
+  ];
 
+console.log(newData)
 
 
     return (
         <>
              <ResponsivePie
-        data={data}
+        data={newData}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
@@ -51,27 +90,7 @@ let visitorScore = data[0].value
         arcLinkLabelsColor={{ from: 'color' }}
         arcLabelsSkipAngle={10}
         arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
-        defs={[
-            {
-                id: 'dots',
-                type: 'patternDots',
-                background: 'inherit',
-                color: 'rgba(255, 255, 255, 0.3)',
-                size: 4,
-                padding: 1,
-                stagger: true
-            },
-            {
-                id: 'lines',
-                type: 'patternLines',
-                background: 'inherit',
-                color: 'rgba(255, 255, 255, 0.3)',
-                rotation: -45,
-                lineWidth: 6,
-                spacing: 10
-            }
-        ]}
-  
+       
         legends={[
             {
                 anchor: 'bottom',
