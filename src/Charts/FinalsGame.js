@@ -41,25 +41,30 @@ const nbaObj = nba[0].home_team
 
 console.log(nba)
 let homeScore = nba[0].home_team_score
+let Hname = nbaObj.name
 
 
  homeScore = {
    ...nbaObj,
-   value :  homeScore
+   value :  homeScore,
+   id: Hname
  }
 
  console.log(homeScore)
 
  // Visitor team 
  const nbaObjVisitor = nba[0].visitor_team
-
+console.log(nbaObjVisitor)
 
 let visitorScore = nba[0].visitor_team_score
+let Vname = nbaObjVisitor.name
 
+console.log(Vname)
 
  visitorScore = {
    ...nbaObjVisitor,
-   value :  visitorScore
+   value :  visitorScore,
+   id: Vname
  }
 
  console.log(visitorScore)
@@ -75,7 +80,7 @@ console.log(newData)
 
     return (
         <>
-             <ResponsivePie
+             <ResponsivePie 
         data={newData}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
