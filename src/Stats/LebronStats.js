@@ -69,7 +69,7 @@ export default function Stats() {
                 <img class="h-100  " src={LBJ} ></img>
             </div>
 
-        <div style={{position:"relative", top:"7rem"}}  >
+        <div style={{position:"relative", top:"6rem"}}  >
                  <h3 className="stats-title py-3" >{lebron[0].pts} Points</h3>
             <h3  className="stats-title whitespace-nowrap py-3" >{lebron[0].reb} Rebounds</h3>
 

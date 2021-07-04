@@ -7,7 +7,10 @@ import PHX from './images/phoenix-suns-logo-black-and-white-transparent.png'
 import LAC from './images/1280px-The_official_logo_of_the_Los_Angeles_Clippers.svg.png'
 import FinalsGame from './Charts/FinalsGame';
 
-import Stats from './Stats/Stats'
+import Stats from './Stats/LebronStats'
+import CurryStats from './Stats/CurryStats'
+import EandWConferenceFinals from './Charts/ConferenceGames/EandWConferenceFinals';
+
 
 function App() {
   return (
@@ -37,17 +40,13 @@ function App() {
     <img class=" h-24  m-10 " src={OKC} alt="" ></img>
     <img class=" h-24 px-3 m-0 " src={LAL} alt="" ></img>
     <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
+    <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
+    <img class=" h-24  m-10 " src={OKC} alt="" ></img>
+    <img class=" h-24 px-3 m-0 " src={LAL} alt="" ></img>
+    <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>    <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
+    <img class=" h-24  m-10 " src={OKC} alt="" ></img>
+    <img class=" h-24 px-3 m-0 " src={LAL} alt="" ></img>
     <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
-
-    <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
-    <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
-
-    <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
-
-    <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
-
-    <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
-
 v
 <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
 
@@ -58,12 +57,13 @@ v
       <h4 class=" text-center text-3xl my-12 font-bold " >The 2016 NBA Finals</h4>
       <h5 class="text-center text-xl my-12 font-bold " > A Game 7 To Remember...</h5 >
 
-     <div class="h-2/5 my-26  w-100" >
+     <div class=" my-26 h-120 w-100" >
    
 
+    <EandWConferenceFinals/>
     <FinalsGame/>
     <Stats/>
-
+    <CurryStats/>
 
      
 
@@ -82,3 +82,6 @@ v
 }
 
 export default App;
+
+
+

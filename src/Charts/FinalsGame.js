@@ -37,12 +37,14 @@ export default function FinalsGame() {
     }
 ]
 
+
+
 const nbaObj = nba[0].home_team
 
 console.log(nba)
 let homeScore = nba[0].home_team_score
 let Hname = nbaObj.name
-
+    
 
  homeScore = {
    ...nbaObj,
@@ -109,7 +111,7 @@ console.log(newData)
                 itemTextColor: '#999',
                 itemDirection: 'left-to-right',
                 itemOpacity: 1,
-                symbolSize: 18,
+                symbolSize: 36,
                 symbolShape: 'circle',
                 effects: [
                     {
