@@ -54,16 +54,16 @@ v
 
   </div>
    <div class="  mx-20 w-screen ">
-      <h4 class=" text-center text-3xl my-12 font-bold " >The 2016 NBA Finals</h4>
-      <h5 class="text-center text-xl my-12 font-bold " > A Game 7 To Remember...</h5 >
+      <h4 class=" text-center text-3xl my-12 font-bold " >The 2016 NBA Playoffs</h4>
+      <h5 class="text-center text-xl my-12 font-bold " > The Cleveland Cavaliers Road To The Finals</h5 >
 
      <div class=" my-26 h-120 w-100" >
    
 
     <EandWConferenceFinals/>
-    {/* <FinalsGame/>
+    <FinalsGame/>
     <Stats/>
-    <CurryStats/> */}
+    <CurryStats/>
 
      
 
@@ -85,3 +85,13 @@ export default App;
 
 
 
+
+
+// const data = [{
+//   "team": "Cleveland Cavaliers", 
+//   "Love": 20,
+//    "Thomspon": 2,
+//    "Smith": 15,
+//   "Irving": 30,
+//  }
+// ]
