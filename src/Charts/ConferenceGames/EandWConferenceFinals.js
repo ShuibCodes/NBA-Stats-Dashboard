@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { ResponsiveBar } from '@nivo/bar'
 
+
 const EandWConferenceFinals = () => {
+
+    const [raptors, SetRaptors] = useState([])
+
+
+
    const data = [
     {
         "id": 774580,
@@ -1359,7 +1365,7 @@ const EandWConferenceFinals = () => {
 
 const cleveland = data.splice(0,5).map(e => {
     return {
-        team: e.team.full_name,
+        "team": 'ECF',
   [` ${e.player.last_name}`]  :  e.pts,
      
     };
@@ -1367,15 +1373,13 @@ const cleveland = data.splice(0,5).map(e => {
     
 });
 
-
-
 // making it into one object 
 
-   const ECF = Object.assign({}, ...cleveland);
+const ECF = Object.assign({}, ...cleveland);
     
 console.log(ECF);
 
-//
+
 
 
 // Round 2 
@@ -2736,7 +2740,7 @@ const second =  [
 
 const secondRound = second.slice(0,5).map(e => {
     return {
-        team: e.team.full_name,
+       "team": 'Second Round',
       [ ` ${e.player.last_name}` ] :  e.pts,
      
     };
@@ -2749,6 +2753,8 @@ console.log(secondRound)
 const finalSecond = Object.assign({}, ...secondRound);
 
 console.log(finalSecond);
+
+// First Round
 
 const first =  [
     {
@@ -4105,7 +4111,7 @@ const first =  [
 
 const firstRound = first.splice(13,5).map(e => {
     return {
-        team: e.team.full_name,
+       "team": 'First Round',
       [ ` ${e.player.last_name}` ] :  e.pts,
      
     };
@@ -4119,21 +4125,20 @@ const finalFirst = Object.assign({}, ...firstRound);
 
 console.log(finalFirst);
 let chartData =[]
-chartData.push(ECF,finalSecond,finalFirst)
+chartData.push(finalFirst, finalSecond, ECF)
 console.log(chartData)
 
-const chartedData = [
-
-    {"team": "ECF", "James": 33, "Love": 20, "Thompson": 2, "Smith": 15, "Irving": 30},
- {"team": "First Round", "Kames": 21, "Love": 27, "Thompson": 5, "Smith": 3, "Irving":21},
- {"team": "Second Round", "James": 22, " Love": 28, "Thompson": 2, "Smith": 9, "Irving":31}
+const FinalChartData = [
+{"team": "ECF", "James": 33, "Love": 20, "Thompson": 2, "Smith": 15, "Irving": 30},
+ {"team": "First Round", "James": 21, "Love": 27, "Thompson": 5, "Smith": 3, "Irving":21},
+{"team": "Second Round", "James": 22, " Love": 28, "Thompson": 2, "Smith": 9, "Irving":31}
 ]
 
     return (
         <div class=" w-auto h-96 ">
         
               <ResponsiveBar
-        data={chartedData}
+        data={FinalChartData}
         indexBy="team"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
