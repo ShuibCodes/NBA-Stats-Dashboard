@@ -6,7 +6,9 @@ import LAL from './images/1280px-Los_Angeles_Lakers_logo.svg.png'
 import PHX from './images/phoenix-suns-logo-black-and-white-transparent.png'
 import LAC from './images/1280px-The_official_logo_of_the_Los_Angeles_Clippers.svg.png'
 import FinalsGame from './Charts/FinalsGame';
+import Lebron from './Animations/Lebron'
 import Lebron2016 from './Animations/Lebron2016'
+
 import Stats from './Stats/LebronStats'
 import CurryStats from './Stats/CurryStats'
 import EandWConferenceFinals from './Charts/ConferenceGames/EandWConferenceFinals';
@@ -42,7 +44,7 @@ function App() {
     <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
     <img class=" h-24  m-10 " src={OKC} alt="" ></img>
     
-    <Link to='Lebron2016' >
+    <Link to='Lebron' >
     <img class=" h-24 px-3 m-0 " src={LAL} alt="" ></img>
     </Link>
    
@@ -68,9 +70,11 @@ v
 
      <div class=" my-26 h-120 w-100" >
    
-
-  <Route path='/Lebron2016'>
-   <Lebron2016/>
+     <Route path='Lebron2016' >
+            <Lebron2016/>
+        </Route>
+  <Route path='/Lebron'>
+   <Lebron/>
   </Route>
   <Route path='/EWF' >
   <EandWConferenceFinals/>

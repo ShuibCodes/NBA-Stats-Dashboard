@@ -1,7 +1,12 @@
 import React, {useState,useEffect} from 'react'
 import { ResponsiveBar } from '@nivo/bar'
-function Lebron() {
+import '../App.css'
+
+function Lebron2016() {
     
+    // make this an api call
+    // all three buttons here, hide chart with useState?
+
    const season19= [
         {
             "games_played": 67,
@@ -29,8 +34,35 @@ function Lebron() {
         }
     ]
 
+   const stats = [{"stat" :"points" , "value": ""}, {"stat": "rebounds", value: ""}, {"stat": "assists", value: ""}]
+
+    const sortedData = (data, nums) => {
+      const finalData = nums.map((stat) => {
+           if(Object.values(stat).includes("points")){
+               return{
+                   ...stat,
+                   value: data[0].pts
+               }
+           } else if(Object.values(stat).includes("rebounds")){
+            return{
+                ...stat,
+                value:data[0].reb
+            }
+           } else if(Object.values(stat).includes("assists")){
+               return{
+                   ...stat,
+                   value:data[0].ast
+               }
+           }
+        
+       }) 
+        return finalData
+       
+    }
 
 
+
+    console.log(sortedData(season19,stats))
     // object with stat name as indexBy and stats as value, use axios to pull certain data points  out to make it more clean and readable ?
 
 
@@ -38,13 +70,13 @@ function Lebron() {
 
 
     return (
-        <div>
+        <div class=" my-56 w-auto   h-120  " >
       <ResponsiveBar
-        data={}
-        indexBy="team"
+        data={sortedData(season19,stats)}
+        indexBy="stat"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
-        keys={["James", "Love", "Thompson", "Smith", "Irving"] }
+        keys={["value"] }
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
         valueFormat={{ format: '', enabled: false }}
@@ -121,4 +153,4 @@ function Lebron() {
     )
 }
 
-export default Lebron
+export default Lebron2016
