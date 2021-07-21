@@ -1,6 +1,6 @@
 import React from 'react'
 import LBJ from './PlayerImages/curry-copy.jpg'
-import './Stats.css'
+import './Stats.scss'
 
 export default function Stats() {
     const curry  = [

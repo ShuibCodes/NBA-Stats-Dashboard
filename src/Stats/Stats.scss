@@ -1,0 +1,73 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+.stats-title{
+    font-family: 'Bitter', serif;
+    font-size: 45px;
+}
+
+
+.yearBtn{
+    background-color: #5FA5F9;
+    width: 85px;
+    padding: 10px 20px;
+    margin: 30px;
+    border-radius: 10px;
+    height: 46px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+
+
+
+$purple : #512DA8;
+$blue : #5FA5F9;
+$l_orange : #FBC02D;
+$brick : #FF5722;
+
+@mixin buttonBG($bg) {
+  border: 2px solid $bg;
+  color: $bg;
+  &:hover {
+    background-color: $bg;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.container{
+    margin-top: 20px;
+    margin-left: 20px;
+  .skewBtn{
+    
+    width: 125px;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transition: .5s;
+    font-size: 24px;
+    border-radius: 5px;
+    font-family: "Lato",sans-serif;
+    &:hover{
+      border: none;
+      color: white;
+      font-size: 28px;
+      transform:scale(1.1);
+    }
+  }
+
+}
+
+
+.blue{
+  @include buttonBG($blue);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+.title-container{
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 50px;
+    font-family: 'Otomanopee One', sans-serif;
+}

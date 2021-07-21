@@ -81,7 +81,7 @@ console.log(newData)
 
 
     return (
-        <>
+        <div  class=" h-full my-26  w-100">
              <ResponsivePie 
         data={newData}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -125,6 +125,6 @@ console.log(newData)
         ]}
     />
       
-        </>
+        </div>
     )
 }

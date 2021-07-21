@@ -7,12 +7,13 @@ import PHX from './images/phoenix-suns-logo-black-and-white-transparent.png'
 import LAC from './images/1280px-The_official_logo_of_the_Los_Angeles_Clippers.svg.png'
 import FinalsGame from './Charts/FinalsGame';
 import Lebron from './Animations/Lebron'
-import Lebron2016 from './Animations/Lebron2016'
+import Lebron2019 from './Animations/Lebron2019'
 
 import Stats from './Stats/LebronStats'
 import CurryStats from './Stats/CurryStats'
 import EandWConferenceFinals from './Charts/ConferenceGames/EandWConferenceFinals';
 import {BrowserRouter, Link, Switch ,Route} from 'react-router-dom'
+import RoadToFinals from './Charts/RoadToFinals';
 
 
 function App() {
@@ -40,11 +41,11 @@ function App() {
 
 </form>
 
-    <img class="relative bottom-36  h-24 px-3 mx-10 mt-4 " src={NBA} alt="" ></img>
+   <Link to="/"><img class="relative bottom-36  h-24 px-3 mx-10 mt-4 " src={NBA} alt="" ></img></Link>
     <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
     <img class=" h-24  m-10 " src={OKC} alt="" ></img>
     
-    <Link to='Lebron' >
+    <Link to='/Lebron2019' >
     <img class=" h-24 px-3 m-0 " src={LAL} alt="" ></img>
     </Link>
    
@@ -65,29 +66,20 @@ v
 
   </div>
    <div class="  mx-20 w-screen ">
-      {/* <h4 class=" text-center text-3xl my-12 font-bold " >The 2016 NBA Playoffs</h4>
+      {/* <h4 class=" text-center text-3xl my-12 font-bold " >The 2019 NBA Playoffs</h4>
       <h5 class="text-center text-xl my-12 font-bold " > The Cleveland Cavaliers Road To The Finals</h5 > */}
 
      <div class=" my-26 h-120 w-100" >
    
-     <Route path='Lebron2016' >
-            <Lebron2016/>
+     <Route path='/Lebron2019' >
+            <Lebron2019/>
         </Route>
   <Route path='/Lebron'>
    <Lebron/>
   </Route>
-  <Route path='/EWF' >
-  <EandWConferenceFinals/>
-  </Route>
-  <Route path='/FinalsGame' >
-  <FinalsGame/>
-  </Route>
-  <Route path='/Stats' >
-  <Stats/>
-  </Route>
-  <Route path='/CurryStats' >
-  <CurryStats/> 
-  </Route>
+    <Route path='/' exact>
+      <RoadToFinals/>
+    </Route>
    
      
 
