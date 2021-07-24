@@ -10,7 +10,8 @@ function Lebron2019() {
     const [open, setOpen] = useState(false)
     const [open20, setOpen20] = useState(false)
     const [open21, setOpen21] = useState(false)
-    const [year,setYear] = useState(0)
+ 
+    
 
     
     // make this an api call
@@ -94,8 +95,8 @@ function Lebron2019() {
             "fta": 5.67,
             "oreb": 0.64,
             "dreb": 7.7,
-            "reb": 7.8, 
-            "ast": 7.78,
+            "reb": 5, 
+            "ast": 20,
             "stl": 1.07,
             "blk": 0.56,
             "turnover": 3.73,
@@ -108,14 +109,24 @@ function Lebron2019() {
     
 ]
 
+const [dataset, setDataset] = useState([]);
 
+    
+ 
+const seasons = [season19,season20,season21]
+    
 
+        const yearChanger = () => {
+            const seasons = [season19,season20,season21]
+            for(let i = 0; i < seasons.length ; i++){
+                setDataset(seasons[i])
+            }
+         
+        }
 
+     
 
-
-
-
-
+  
 
 
     const stats = [{"stat" :"points" , ppg: ""}, {"stat": "rebounds", ast: ""}, {"stat": "assists", reb: ""}]
@@ -145,15 +156,13 @@ function Lebron2019() {
         
    // function that loops thru all years , (put yyears into an array) and goes back to original year 
 
-        setInterval(() => {
-     
-                setDataset(season21)
 
-    
-          }, 2000)
 
-        clearInterval()
-      
+
+
+   setInterval(() => {
+    yearChanger()
+   }, 2000)
             return finalData
         
         }
@@ -162,7 +171,6 @@ function Lebron2019() {
       
     // console.log(sortedData(season20,stats))
    
-    const [dataset, setDataset] = useState(season19);
     
 
 
