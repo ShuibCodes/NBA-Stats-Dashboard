@@ -6,9 +6,9 @@ import LAL from './images/1280px-Los_Angeles_Lakers_logo.svg.png'
 import PHX from './images/phoenix-suns-logo-black-and-white-transparent.png'
 import LAC from './images/1280px-The_official_logo_of_the_Los_Angeles_Clippers.svg.png'
 import FinalsGame from './Charts/FinalsGame';
-import Lebron from './Animations/Lebron'
-import Lebron2019 from './Animations/Lebron2019'
 
+import Lebron2019 from './Animations/Lebron2019'
+import Booker from './Animations/Booker'
 import Stats from './Stats/LebronStats'
 import CurryStats from './Stats/CurryStats'
 import EandWConferenceFinals from './Charts/ConferenceGames/EandWConferenceFinals';
@@ -42,7 +42,11 @@ function App() {
 </form>
 
    <Link to="/"><img class="relative bottom-36  h-24 px-3 mx-10 mt-4 " src={NBA} alt="" ></img></Link>
+
+    <Link to='/Booker'>
     <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
+    </Link>
+
     <img class=" h-24  m-10 " src={OKC} alt="" ></img>
     
     <Link to='/Lebron2019' >
@@ -74,9 +78,10 @@ v
      <Route path='/Lebron2019' >
             <Lebron2019/>
         </Route>
-  <Route path='/Lebron'>
-   <Lebron/>
-  </Route>
+        <Route path='/Booker' >
+            <Booker/>
+        </Route>
+      
     <Route path='/' exact>
       <RoadToFinals/>
     </Route>
@@ -85,7 +90,7 @@ v
 
      </div>
 
- 
+  
    </div>
 </div>
 
@@ -95,6 +100,7 @@ v
 </body>
  </Switch>
 </BrowserRouter>
+
     </div>
   );
 }
