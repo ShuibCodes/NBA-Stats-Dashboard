@@ -9,168 +9,178 @@ import React, {
   import { ResponsiveBar } from "@nivo/bar";
   import "../App.css";
   import { useInterval } from 'use-interval';
-  
+  import lebron from '../images/lebron.png'
+
   // Moved all this static data out of the component so that
   // rerenders dont need to re compute it again.
 
-  const season16 = [ { "games_played": 74,
-  "player_id": 237,
-  "season": 2016,
-  "min": "37:45",
-  "fgm": 9.95,
-  "fga": 18.16,
-  "fg3m": 1.68,
-  "fg3a": 4.62,
-  "ftm": 4.84,
-  "fta": 7.18,
-  "oreb": 1.31,
-  "dreb": 7.32,
-  "reb": 8.64,
-  "ast": 8.73,
-  "stl": 1.24,
-  "blk": 0.59,
-  "turnover": 4.09,
-  "pf": 1.81,
-  "pts": 26.41,
-  "fg_pct": 0.548,
-  "fg3_pct": 0.363,
-  "ft_pct": 0.674
-}]
+  
+  
+  function Lebron2019(props) {
 
 
-const season17 = [{
-  "games_played": 82,
-  "player_id": 237,
-  "season": 2017,
-  "min": "36:53",
-  "fgm": 10.45,
-  "fga": 19.27,
-  "fg3m": 1.82,
-  "fg3a": 4.95,
-  "ftm": 4.73,
-  "fta": 6.48,
-  "oreb": 1.18,
-  "dreb": 7.46,
-  "reb": 8.65,
-  "ast": 9.11,
-  "stl": 1.41,
-  "blk": 0.87,
-  "turnover": 4.23,
-  "pf": 1.66,
-  "pts": 27.45,
-  "fg_pct": 0.542,
-  "fg3_pct": 0.367,
-  "ft_pct": 0.731
-}]
 
-const season18 = [{
+    const season16 = [ { "games_played": 74,
+    "player_id": 237,
+    "season": 2016,
+    "min": "37:45",
+    "fgm": 9.95,
+    "fga": 18.16,
+    "fg3m": 1.68,
+    "fg3a": 4.62,
+    "ftm": 4.84,
+    "fta": 7.18,
+    "oreb": 1.31,
+    "dreb": 7.32,
+    "reb": 8.64,
+    "ast": 8.73,
+    "stl": 1.24,
+    "blk": 0.59,
+    "turnover": 4.09,
+    "pf": 1.81,
+    "pts": 26.41,
+    "fg_pct": 0.548,
+    "fg3_pct": 0.363,
+    "ft_pct": 0.674
+  }]
   
-  "games_played": 55,
-  "player_id": 237,
-  "season": 2018,
-  "min": "35:13",
-  "fgm": 10.15,
-  "fga": 19.91,
-  "fg3m": 2.02,
-  "fg3a": 5.95,
-  "ftm": 5.05,
-  "fta": 7.6,
-  "oreb": 1.02,
-  "dreb": 7.42,
-  "reb": 8.44,
-  "ast": 8.25,
-  "stl": 1.31,
-  "blk": 0.6,
-  "turnover": 3.58,
-  "pf": 1.71,
-  "pts": 27.36,
-  "fg_pct": 0.51,
-  "fg3_pct": 0.339,
-  "ft_pct": 0.665
-}]
+  
+  const season17 = [{
+    "games_played": 82,
+    "player_id": 237,
+    "season": 2017,
+    "min": "36:53",
+    "fgm": 10.45,
+    "fga": 19.27,
+    "fg3m": 1.82,
+    "fg3a": 4.95,
+    "ftm": 4.73,
+    "fta": 6.48,
+    "oreb": 1.18,
+    "dreb": 7.46,
+    "reb": 8.65,
+    "ast": 9.11,
+    "stl": 1.41,
+    "blk": 0.87,
+    "turnover": 4.23,
+    "pf": 1.66,
+    "pts": 27.45,
+    "fg_pct": 0.542,
+    "fg3_pct": 0.367,
+    "ft_pct": 0.731
+  }]
+  
+  const season18 = [{
+    
+    "games_played": 55,
+    "player_id": 237,
+    "season": 2018,
+    "min": "35:13",
+    "fgm": 10.15,
+    "fga": 19.91,
+    "fg3m": 2.02,
+    "fg3a": 5.95,
+    "ftm": 5.05,
+    "fta": 7.6,
+    "oreb": 1.02,
+    "dreb": 7.42,
+    "reb": 8.44,
+    "ast": 8.25,
+    "stl": 1.31,
+    "blk": 0.6,
+    "turnover": 3.58,
+    "pf": 1.71,
+    "pts": 27.36,
+    "fg_pct": 0.51,
+    "fg3_pct": 0.339,
+    "ft_pct": 0.665
+  }]
+  
+    const season19 = [
+      {
+        games_played: 67,
+        player_id: 237,
+        season: 2019,
+        min: "34:34",
+        fgm: 9.6,
+        fga: 19.45,
+        fg3m: 2.21,
+        fg3a: 6.34,
+        ftm: 3.94,
+        fta: 5.69,
+        oreb: 0.96,
+        dreb: 6.85,
+        reb: 7.81,
+        ast: 10.21,
+        stl: 1.16,
+        blk: 0.55,
+        turnover: 3.9,
+        pf: 1.76,
+        pts: 25.34,
+        fg_pct: 0.493,
+        fg3_pct: 0.348,
+        ft_pct: 0.693,
+      },
+    ];
+    
+    const season20 = [
+      {
+        games_played: 45,
+        player_id: 237,
+        season: 2020,
+        min: "33:24",
+        fgm: 9.38,
+        fga: 18.29,
+        fg3m: 2.31,
+        fg3a: 6.33,
+        ftm: 3.96,
+        fta: 5.67,
+        oreb: 0.64,
+        dreb: 7.02,
+        reb: 7.67,
+        ast: 7.78,
+        stl: 1.07,
+        blk: 0.56,
+        turnover: 3.73,
+        pf: 1.56,
+        pts: 25.02,
+        fg_pct: 0.513,
+        fg3_pct: 0.365,
+        ft_pct: 0.698,
+      },
+    ];
+    
+    const season21 = [
+      {
+        games_played: 45,
+        player_id: 237,
+        season: 2020,
+        min: "33:24",
+        fgm: 9.38,
+        fga: 18.29,
+        fg3m: 2.31,
+        fg3a: 6.33,
+        ftm: 3.96,
+        fta: 5.67,
+        oreb: 0.64,
+        dreb: 7.7,
+        reb: 5,
+        ast: 7.8,  
+        stl: 1.07,
+        blk: 0.56,
+        turnover: 3.73,
+        pf: 1.56,
+        pts: 25.0,
+        fg_pct: 0.513,
+        fg3_pct: 0.365,
+        ft_pct: 0.698,
+      },
+    ];
 
-  const season19 = [
-    {
-      games_played: 67,
-      player_id: 237,
-      season: 2019,
-      min: "34:34",
-      fgm: 9.6,
-      fga: 19.45,
-      fg3m: 2.21,
-      fg3a: 6.34,
-      ftm: 3.94,
-      fta: 5.69,
-      oreb: 0.96,
-      dreb: 6.85,
-      reb: 7.81,
-      ast: 10.21,
-      stl: 1.16,
-      blk: 0.55,
-      turnover: 3.9,
-      pf: 1.76,
-      pts: 25.34,
-      fg_pct: 0.493,
-      fg3_pct: 0.348,
-      ft_pct: 0.693,
-    },
-  ];
-  
-  const season20 = [
-    {
-      games_played: 45,
-      player_id: 237,
-      season: 2020,
-      min: "33:24",
-      fgm: 9.38,
-      fga: 18.29,
-      fg3m: 2.31,
-      fg3a: 6.33,
-      ftm: 3.96,
-      fta: 5.67,
-      oreb: 0.64,
-      dreb: 7.02,
-      reb: 7.67,
-      ast: 7.78,
-      stl: 1.07,
-      blk: 0.56,
-      turnover: 3.73,
-      pf: 1.56,
-      pts: 25.02,
-      fg_pct: 0.513,
-      fg3_pct: 0.365,
-      ft_pct: 0.698,
-    },
-  ];
-  
-  const season21 = [
-    {
-      games_played: 45,
-      player_id: 237,
-      season: 2020,
-      min: "33:24",
-      fgm: 9.38,
-      fga: 18.29,
-      fg3m: 2.31,
-      fg3a: 6.33,
-      ftm: 3.96,
-      fta: 5.67,
-      oreb: 0.64,
-      dreb: 7.7,
-      reb: 5,
-      ast: 7.8,  
-      stl: 1.07,
-      blk: 0.56,
-      turnover: 3.73,
-      pf: 1.56,
-      pts: 25.0,
-      fg_pct: 0.513,
-      fg3_pct: 0.365,
-      ft_pct: 0.698,
-    },
-  ];
-  
-  function Lebron2019() {
+
+
+
+    console.log(props)
     const [open, setOpen] = useState(false);
     const [open20, setOpen20] = useState(false);
     const [open21, setOpen21] = useState(false);
@@ -184,9 +194,9 @@ const season18 = [{
     const seasons = useMemo(() => [season16, season17, season18,season19, season20, season21], []);
     const stats = useMemo(
       () => [
-        { stat: "points", ppg: "" },
-        { stat: "rebounds", ast: "" },
-        { stat: "assists", reb: "" },
+        { stat: "Points", ppg: "" },
+        { stat: "Rebounds", ast: "" },
+        { stat: "Assists", reb: "" },
       ],
       []
     );
@@ -223,20 +233,20 @@ const season18 = [{
       // added some checks to make sure we actually have a dataset
       if (dataset && dataset.length) {
         const finalData = nums.map((stat) => {
-          if (Object.values(stat).includes("points")) {
+          if (Object.values(stat).includes("Points")) {
             return {
               ...stat,
-              ppg: dataset[0].pts,
+              PPG: dataset[0].pts,
             };
-          } else if (Object.values(stat).includes("rebounds")) {
+          } else if (Object.values(stat).includes("Rebounds")) {
             return {
               ...stat,
-              reb: dataset[0].reb,
+              REB: dataset[0].reb,
             };
-          } else if (Object.values(stat).includes("assists")) {
+          } else if (Object.values(stat).includes("Assists")) {
             return {
               ...stat,
-              ast: dataset[0].ast,
+             AST: dataset[0].ast,
             };
           }
         });
@@ -278,17 +288,21 @@ const [layout , setLayout] = useState("horizontal")
     return (
       <>
         <div style={{ padding: "20px" }}>
-          <div className="title-container">
+        <div class="flex">
+        <div className="title-container">
             <h3 className="no23">Small Forward: Lebron James</h3>
             <p  class="text-lg" > 2016 - 2021</p>
+
           </div>
+          <img  class="flex-1 lg:px-56 md:px-32  relative  right-32  w-10 h-64 " src={lebron} alt="booker"></img>
+        </div>
   
           <div className="container  flex ">
       
           </div>
         </div>
-      <button class="bg-blue-300 w-46  h-10 ml-10  rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
-        <div class="w-auto h-96 ">
+      <button class="bg-blue-300 w-46  h-10 ml-10   rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
+        <div class="w-auto h-96 px-11 relative right-24 ">
           {data ? (
             <ResponsiveBar
               data={data}
@@ -297,7 +311,7 @@ const [layout , setLayout] = useState("horizontal")
               padding={0.3}
               maxValue={40}
               layout={layout}
-              keys={["ppg", "ast", "reb"]}
+              keys={["PPG", "AST", "REB"]}
               valueScale={{ type: "linear" }}
               indexScale={{ type: "band", round: true }}
               valueFormat={{ format: "", enabled: false }}
@@ -350,8 +364,8 @@ const [layout , setLayout] = useState("horizontal")
                   anchor: "bottom-right",
                   direction: "column",
                   justify: false,
-                  translateX: 120,
-                  translateY: 0,
+                  translateX: 170,
+                  translateY: -130,
                   itemsSpacing: 2,
                   itemWidth: 100,
                   itemHeight: 20,
