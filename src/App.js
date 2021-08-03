@@ -16,8 +16,8 @@ import {BrowserRouter, Link, Switch ,Route} from 'react-router-dom'
 import RoadToFinals from './Charts/RoadToFinals';
 
 
-function App() {
-
+function App(props) {
+  console.log(props)
  
 
   return (
@@ -42,9 +42,9 @@ function App() {
 </form>
 
    <Link to="/"><img class="relative bottom-36  h-24 px-3 mx-10 mt-4 " src={NBA} alt="" ></img></Link>
-
+  
     <Link to='/Booker'>
-    <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
+
     </Link>
 
     <img class=" h-24  m-10 " src={OKC} alt="" ></img>
