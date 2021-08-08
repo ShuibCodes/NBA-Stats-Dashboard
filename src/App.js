@@ -17,7 +17,17 @@ import RoadToFinals from './Charts/RoadToFinals';
 
 
 function App(props) {
-  console.log(props)
+  fetch("https://www.balldontlie.io/api/v1/season_averages?player_ids[]=57&season=2016&season=2018", {
+  
+  
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+    console.error(err);
+  })
+ 
  
 
   return (
