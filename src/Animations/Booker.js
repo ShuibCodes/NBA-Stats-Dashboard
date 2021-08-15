@@ -10,6 +10,7 @@ import React, {
   import "../App.css";
   import { useInterval } from 'use-interval';
   import booker from '../images/booker.png'
+import LebronLine from "./LebronLine";
   
   // Moved all this static data out of the component so that
   // rerenders dont need to re compute it again.
@@ -283,7 +284,7 @@ const [layout , setLayout] = useState("horizontal")
 
     return (
       <>
-        <div style={{ padding: "20px"  }}>
+        <div style={{ padding: "20px" }}>
         <div class="flex">
         <div className="title-container">
             <h3 className="no23">Shooting Guard: Devin Booker</h3>
@@ -299,7 +300,7 @@ const [layout , setLayout] = useState("horizontal")
           </div>
         </div>
       <button class="bg-blue-300 w-46  h-10 ml-10  rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
-        <div class="w-auto h-96 mr-24 relative right-8">
+        <div class=" flex w-1/2 h-96 mr-24 relative right-8">
           {data ? (
             <ResponsiveBar
               data={data}
@@ -381,6 +382,9 @@ const [layout , setLayout] = useState("horizontal")
               ]}
             />
           ) : null}
+        </div>
+        <div>
+          <LebronLine/>
         </div>
       </>
     );

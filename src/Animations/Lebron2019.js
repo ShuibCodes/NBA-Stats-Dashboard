@@ -250,7 +250,7 @@ import React, {
             };
           }
         });
-  
+        console.log(finalData)
         return finalData;
       }
       // return null if we dont have a dataset

@@ -14,8 +14,7 @@ import CurryStats from './Stats/CurryStats'
 import EandWConferenceFinals from './Charts/ConferenceGames/EandWConferenceFinals';
 import {BrowserRouter, Link, Switch ,Route} from 'react-router-dom'
 import RoadToFinals from './Charts/RoadToFinals';
-
-
+import LebronLine from './Animations/LebronLine'
 function App(props) {
   fetch("https://www.balldontlie.io/api/v1/season_averages?player_ids[]=57&season=2016&season=2018", {
   
@@ -66,7 +65,9 @@ function App(props) {
     
    
     <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>
+    <Link to='/Booker'>
     <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
+    </Link>
     <img class=" h-24  m-10 " src={OKC} alt="" ></img>
     <img class=" h-24 px-3 m-0 " src={LAL} alt="" ></img>
     <img class=" h-24 px-4 my-10 " src={LAC} alt="" ></img>    <img class=" h-36 px-3 m-0 " src={PHX} alt="" ></img>
@@ -85,6 +86,10 @@ v
 
      <div class=" my-26 h-120 w-100" >
    
+      
+     <Route path='/LebronLine' >
+            <LebronLine/>
+        </Route>
      <Route path='/Lebron2019' >
             <Lebron2019/>
         </Route>
@@ -97,7 +102,7 @@ v
     </Route>
    
      
-
+  
      </div>
 
   
