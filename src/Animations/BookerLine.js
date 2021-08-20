@@ -105,6 +105,7 @@ function BookerLine() {
  const durant = filteredData(data,kd)
   console.log(booker.push(...durant))
 
+  // work out how to put tie all the array of objects together to make multiple lines on the chart 
 
     return (
         <div  style={{height:"400px", width:"900px"}} >
