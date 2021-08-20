@@ -14,18 +14,18 @@ import CurryStats from './Stats/CurryStats'
 import EandWConferenceFinals from './Charts/ConferenceGames/EandWConferenceFinals';
 import {BrowserRouter, Link, Switch ,Route} from 'react-router-dom'
 import RoadToFinals from './Charts/RoadToFinals';
-import LebronLine from './Animations/LebronLine'
+import BookerLine from './Animations/BookerLine'
 function App(props) {
-  fetch("https://www.balldontlie.io/api/v1/season_averages?player_ids[]=57&season=2016&season=2018", {
+  // fetch("https://www.balldontlie.io/api/v1/season_averages?player_ids[]=57&season=2016&season=2018", {
   
   
-  })
-  .then(response => {
-    console.log(response);
-  })
-  .catch(err => {
-    console.error(err);
-  })
+  // })
+  // .then(response => {
+  //   console.log(response);
+  // })
+  // .catch(err => {
+  //   console.error(err);
+  // })
  
  
 
@@ -87,8 +87,8 @@ v
      <div class=" my-26 h-120 w-100" >
    
       
-     <Route path='/LebronLine' >
-            <LebronLine/>
+     <Route path='/BookerLine' >
+            <BookerLine/>
         </Route>
      <Route path='/Lebron2019' >
             <Lebron2019/>

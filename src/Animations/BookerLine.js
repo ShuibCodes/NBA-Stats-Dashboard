@@ -33,8 +33,35 @@ const booker_line = [
 
 ]
 
+const kd = [
+  {
+    "season": 2016,
+    "pts":25.1,
+  },
+  {
+    "season": 2017,
+    "pts":26.4,
+  },
+  {
+    "season": 2018,
+    "pts":26.0,
+  },
+  {
+    "season": 2019,
+    "pts":0,
+  },
 
-function LebronLine() {
+  {
+    "season": 2020,
+    "pts":26.9,
+  },
+ 
+
+
+]
+
+
+function BookerLine() {
 
   
   const data = useMemo(
@@ -62,14 +89,10 @@ function LebronLine() {
     console.log(data)
     const newFd = fd.map((e) => Object.keys(fd[0])) 
     console.log(fd)
-    // replace with x and y 
-    
-  
+    // replacing with x and y 
     var i;
     for(i = 0; i < fd.length; i++){
         fd[i].x = fd[i]['season'];
-        
-    
         fd[i].y = fd[i]['pts'];
        
   }
@@ -78,15 +101,13 @@ function LebronLine() {
   
   }
   
-  console.log(filteredData(data,booker_line))
- 
-    // first find an effecient way to pull in data with multiple years (8)
-    // then make a succinct function to make the object 
-  
+ const booker = filteredData(data,booker_line)
+ const durant = filteredData(data,kd)
+  console.log(booker.push(...durant))
 
 
     return (
-        <div class="w-1/2">
+        <div  style={{height:"400px", width:"900px"}} >
              <ResponsiveLine
         data={filteredData(data,booker_line)}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -149,4 +170,4 @@ function LebronLine() {
     )
 }
 
-export default LebronLine
+export default BookerLine

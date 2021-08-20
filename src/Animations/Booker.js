@@ -10,7 +10,7 @@ import React, {
   import "../App.css";
   import { useInterval } from 'use-interval';
   import booker from '../images/booker.png'
-import LebronLine from "./LebronLine";
+import BookerLine from "./BookerLine";
   
   // Moved all this static data out of the component so that
   // rerenders dont need to re compute it again.
@@ -291,7 +291,7 @@ const [layout , setLayout] = useState("horizontal")
             <p  class="text-lg" > 2016 - 2021</p>
 
           </div>
-          <img  class="flex-1 lg:px-64   relative  right-64  w-10 h-64 " src={booker} alt="booker"></img>
+          <img  class="flex-1 px-32   relative  right-32  w-10 h-64 " src={booker} alt="booker"></img>
         </div>
          
   
@@ -300,7 +300,7 @@ const [layout , setLayout] = useState("horizontal")
           </div>
         </div>
       <button class="bg-blue-300 w-46  h-10 ml-10  rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
-        <div class=" flex w-1/2 h-96 mr-24 relative right-8">
+        <div class="w-auto h-96 mr-24 relative right-8">
           {data ? (
             <ResponsiveBar
               data={data}
@@ -384,7 +384,7 @@ const [layout , setLayout] = useState("horizontal")
           ) : null}
         </div>
         <div>
-          <LebronLine/>
+          <BookerLine/>
         </div>
       </>
     );
