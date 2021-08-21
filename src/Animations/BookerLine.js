@@ -120,7 +120,7 @@ booker.push(kevin[0])
   // work out how to put tie all the array of objects together to make multiple lines on the chart 
 
     return (
-        <div  style={{height:"400px", width:"900px"}} >
+        <div class="grid grid-cols-1 align-middle "  >
              <ResponsiveLine
         data={booker}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}  
