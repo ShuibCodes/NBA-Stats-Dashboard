@@ -188,7 +188,7 @@ function RoadToFinals() {
 
     return (
 
-      <div class="grid grid-cols-1 align-middle md:px-8 xl:px-28"  >
+      <div style={{height:"350px"}}  class="grid grid-cols-1 align-middle md:px-8 xl:px-36"  >
       <ResponsiveLine
  data={russ}
  margin={{ top: 50, right: 110, bottom: 50, left: 60 }}  

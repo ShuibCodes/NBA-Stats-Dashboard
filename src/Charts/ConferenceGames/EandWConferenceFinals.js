@@ -4139,7 +4139,7 @@ console.log(FinalChartData)
 
 
     return (
-        <div class="grid grid-cols-1 align-middle xl:px-16 md:px-0"  >
+        <div style={{height:"350px"}} class="grid grid-cols-1 align-middle xl:px-24 md:px-0"  >
         
               <ResponsiveBar
         data={FinalChartData}

@@ -76,8 +76,17 @@ const data = [
   },
   
 ]
-    
+      
 
+const durantSet=  [ {
+  "id": "Durant",
+  "color": "hsl(22, 70%, 50%)",
+  "data": [
+   
+    
+  ]
+}
+]
 
   const filteredData = (data, nbaData) => {
     const newData = data[0].data.push(...nbaData)
@@ -103,18 +112,17 @@ const data = [
   
 
 
-
  
   // work out how to put tie all the array of objects together to make multiple lines on the chart 
 
     return (
-        <div class="grid grid-cols-1 align-middle "  >
+        <div style={{height:"350px"}}   class="grid grid-cols-1 align-middle md:px-8 xl:px-28" >
              <ResponsiveLine
         data={filteredData(data,booker_line)}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}  
 
         xScale={{ type: 'point' }}
-        yScale={{ type: 'linear', min: '10', max: '100', stacked: true, reverse: false }}
+        yScale={{ type: 'linear', min: '0', max: '60', stacked: true, reverse: false }}
         axisTop={null}
         axisRight={null}
         axisBottom={{

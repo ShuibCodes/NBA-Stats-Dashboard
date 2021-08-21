@@ -291,16 +291,16 @@ const [layout , setLayout] = useState("horizontal")
             <p  class="text-lg" > 2016 - 2021</p>
 
           </div>
-          <img  class="flex-1 px-32 md:px-0   relative  right-32 md:left-8  w-10 h-64 " src={booker} alt="booker"></img>
+          <img  class="flex-1 px-64 md:px-0   relative  right-32 md:left-8  w-10 h-64 " src={booker} alt="booker"></img>
         </div>
-         
+      
   
           <div className="container  flex "> 
       
           </div>
         </div>
       <button class="bg-blue-300 w-46  h-10 ml-10  rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
-        <div class="w-auto h-96 mr-24 relative right-8">
+        <div style={{height:"350px"}} class="grid grid-cols-1 align-middle xl:px-24 md:px-0" >
           {data ? (
             <ResponsiveBar
               data={data}
