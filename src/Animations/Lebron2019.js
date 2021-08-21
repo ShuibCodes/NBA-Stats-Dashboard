@@ -250,7 +250,7 @@ import React, {
             };
           }
         });
-  
+        console.log(finalData)
         return finalData;
       }
       // return null if we dont have a dataset
@@ -260,9 +260,9 @@ import React, {
   
   
     // update the data every 2 seconds using the useInterval hook
-    useInterval(() => {
-      yearChanger();
-    }, 2000);
+    // useInterval(() => {
+    //   yearChanger();
+    // }, 20000);
   
     useEffect(() => {
       // compute the table data

@@ -10,6 +10,7 @@ import React, {
   import "../App.css";
   import { useInterval } from 'use-interval';
   import booker from '../images/booker.png'
+import BookerLine from "./BookerLine";
   
   // Moved all this static data out of the component so that
   // rerenders dont need to re compute it again.
@@ -283,14 +284,14 @@ const [layout , setLayout] = useState("horizontal")
 
     return (
       <>
-        <div style={{ padding: "20px"  }}>
+        <div style={{ padding: "20px" }}>
         <div class="flex">
         <div className="title-container">
             <h3 className="no23">Shooting Guard: Devin Booker</h3>
             <p  class="text-lg" > 2016 - 2021</p>
 
           </div>
-          <img  class="flex-1 lg:px-64   relative  right-64  w-10 h-64 " src={booker} alt="booker"></img>
+          <img  class="flex-1 px-32   relative  right-32  w-10 h-64 " src={booker} alt="booker"></img>
         </div>
          
   
@@ -381,6 +382,9 @@ const [layout , setLayout] = useState("horizontal")
               ]}
             />
           ) : null}
+        </div>
+        <div>
+          <BookerLine/>
         </div>
       </>
     );
