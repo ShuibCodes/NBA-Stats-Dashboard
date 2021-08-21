@@ -76,17 +76,8 @@ const data = [
   },
   
 ]
-      
-
-const durantSet=  [ {
-  "id": "Durant",
-  "color": "hsl(22, 70%, 50%)",
-  "data": [
-   
     
-  ]
-}
-]
+
 
   const filteredData = (data, nbaData) => {
     const newData = data[0].data.push(...nbaData)
@@ -110,10 +101,7 @@ const durantSet=  [ {
 
 
   
-const kevin = filteredData(durantSet,kd)
-const booker = filteredData(data,booker_line)
 
-booker.push(kevin[0])
 
 
  
@@ -122,7 +110,7 @@ booker.push(kevin[0])
     return (
         <div class="grid grid-cols-1 align-middle "  >
              <ResponsiveLine
-        data={booker}
+        data={filteredData(data,booker_line)}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}  
 
         xScale={{ type: 'point' }}

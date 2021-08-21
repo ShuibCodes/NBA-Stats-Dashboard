@@ -4171,20 +4171,7 @@ console.log(FinalChartData)
                 spacing: 10
             }
         ]}
-        fill={[
-            {
-                match: {
-                    id: 'fries'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'sandwich'
-                },
-                id: 'lines'
-            }
-        ]}
+    
         borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
         axisTop={null}
         axisRight={null}
@@ -4192,7 +4179,7 @@ console.log(FinalChartData)
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'country',
+            legend: 'Player',
             legendPosition: 'middle',
             legendOffset: 32
         }}
@@ -4200,7 +4187,7 @@ console.log(FinalChartData)
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'food',
+            legend: 'Points',
             legendPosition: 'middle',
             legendOffset: -40
         }}

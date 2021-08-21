@@ -291,7 +291,7 @@ const [layout , setLayout] = useState("horizontal")
             <p  class="text-lg" > 2016 - 2021</p>
 
           </div>
-          <img  class="flex-1 px-32   relative  right-32  w-10 h-64 " src={booker} alt="booker"></img>
+          <img  class="flex-1 px-32 md:px-0   relative  right-32 md:left-8  w-10 h-64 " src={booker} alt="booker"></img>
         </div>
          
   
