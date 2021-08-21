@@ -99,6 +99,7 @@ v
       
     <Route path='/' exact>
       <RoadToFinals/>
+      <EandWConferenceFinals/>
     </Route>
    
      

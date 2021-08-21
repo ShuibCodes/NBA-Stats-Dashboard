@@ -110,19 +110,23 @@ const durantSet=  [ {
 
 
   
+const kevin = filteredData(durantSet,kd)
+const booker = filteredData(data,booker_line)
+
+booker.push(kevin[0])
 
 
  
   // work out how to put tie all the array of objects together to make multiple lines on the chart 
 
     return (
-        <div  style={{height:"350px", width:"900px"}} >
+        <div  style={{height:"400px", width:"900px"}} >
              <ResponsiveLine
-        data={filteredData(data,booker_line)}
+        data={booker}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}  
 
         xScale={{ type: 'point' }}
-        yScale={{ type: 'linear', min: '0', max: '40', stacked: true, reverse: false }}
+        yScale={{ type: 'linear', min: '10', max: '100', stacked: true, reverse: false }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
@@ -143,6 +147,7 @@ const durantSet=  [ {
             legendOffset: -40,
             legendPosition: 'middle'
         }}
+        colors={{ scheme: 'set3' }}
         pointSize={10}
         pointColor={{ theme: 'background' }}
         pointBorderWidth={2}
