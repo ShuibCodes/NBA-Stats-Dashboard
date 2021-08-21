@@ -206,6 +206,7 @@ function RoadToFinals() {
      legendOffset: 36,
      legendPosition: 'middle'
  }}
+ colors={{ scheme: 'set3' }}
  axisLeft={{
      orient: 'left',
      tickSize: 5,

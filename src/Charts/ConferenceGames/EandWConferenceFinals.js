@@ -4124,25 +4124,29 @@ console.log(firstRound)
 const finalFirst = Object.assign({}, ...firstRound);
 
 console.log(finalFirst);
-let chartData =[]
+const chartData =[]
 chartData.push(finalFirst, finalSecond, ECF)
-console.log(chartData)
 
 const FinalChartData = [
-{"team": "ECF", "James": 33, "Love": 20, "Thompson": 2, "Smith": 15, "Irving": 30},
- {"team": "First Round", "James": 21, "Love": 27, "Thompson": 5, "Smith": 3, "Irving":21},
-{"team": "Second Round", "James": 22, " Love": 28, "Thompson": 2, "Smith": 9, "Irving":31}
+{"Player": "Lebron","2016": 25.3, "2017": 27.5, "2018": 27.4, "2019": 25.3, "2020": 25, },
+ {"Player": "Westbrook","2016": 31.6, "2017": 25.4, "2018": 22.2, "2019": 25.3, "2020": 22.2,},
+{"Player": "Curry","2016": 25.3, "2017": 26.4, "2018": 27.3, " 2019": 20.2, "2020": 32.0,},
+{"Player": "Durant", "2016": 25.1, "2017": 26.4,"2018": 27.3, " 2019": 20.2, "2020": 32.0,}
 ]
+
+console.log(chartData)
+console.log(FinalChartData)
+
 
     return (
         <div class=" w-auto h-96 ">
         
               <ResponsiveBar
         data={FinalChartData}
-        indexBy="team"
+        indexBy="Player"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
-        keys={["James", "Love", "Thompson", "Smith", "Irving"] }
+        keys={["2016","2017","2018", "2019", "2020"] }
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
         valueFormat={{ format: '', enabled: false }}
