@@ -64,27 +64,33 @@ const kd = [
 function BookerLine() {
 
   
-  const data = useMemo(
-    () => [
-      {
-          "id": "Booker",
-          "color": "hsl(232, 70%, 50%)",
-          "data": [
-        
-           
-          ]
-        }
-      ],
-  
-    []
-  );
   
 
+const data = [
+  {
+    "id": "Booker",
+    "color": "hsl(22, 70%, 50%)",
+    "data": [
+    
+    ]
+  },
+  
+]
+      
 
-
+const durantSet=  [ {
+  "id": "Durant",
+  "color": "hsl(22, 70%, 50%)",
+  "data": [
+   
+    
+  ]
+}
+]
 
   const filteredData = (data, nbaData) => {
     const newData = data[0].data.push(...nbaData)
+    console.log(data)
     const fd = data[0].data
     console.log(data)
     const newFd = fd.map((e) => Object.keys(fd[0])) 
@@ -96,24 +102,31 @@ function BookerLine() {
         fd[i].y = fd[i]['pts'];
        
   }
-  
+  console.log(data)
   return data
   
   }
-  
- const booker = filteredData(data,booker_line)
- const durant = filteredData(data,kd)
-  console.log(booker.push(...durant))
 
+
+
+  
+const kevin = filteredData(durantSet,kd)
+const booker = filteredData(data,booker_line)
+
+booker.push(kevin[0])
+
+
+ 
   // work out how to put tie all the array of objects together to make multiple lines on the chart 
 
     return (
         <div  style={{height:"400px", width:"900px"}} >
              <ResponsiveLine
-        data={filteredData(data,booker_line)}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        data={booker}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}  
+
         xScale={{ type: 'point' }}
-        yScale={{ type: 'linear', min: 'auto', max: '30', stacked: true, reverse: false }}
+        yScale={{ type: 'linear', min: '10', max: '100', stacked: true, reverse: false }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
